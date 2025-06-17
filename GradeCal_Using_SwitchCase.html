@@ -1,0 +1,60 @@
+<!-- GradeEvaluator-SwitchCase.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grade Evaluator - switch case</title>
+</head>
+<body>
+  <h2>Check the console for output (Switch-Case Version)</h2>
+
+  <script>
+    let marks = prompt("Enter your marks (out of 100):");
+    marks = Number(marks);
+
+    if (isNaN(marks) || marks < 0 || marks > 100) {
+      console.log("Invalid input — Marks should be between 0 and 100.");
+    } else {
+      let grade;
+
+      if (marks >= 90) {
+        grade = "A";
+      } else if (marks >= 75) {
+        grade = "B";
+      } else if (marks >= 60) {
+        grade = "C";
+      } else if (marks >= 40) {
+        grade = "D";
+      } else {
+        grade = "F";
+      }
+
+      let message;
+
+      switch (grade) {
+        case "A":
+          message = "Excellent!";
+          break;
+        case "B":
+          message = "Great job!";
+          break;
+        case "C":
+          message = "Good effort";
+          break;
+        case "D":
+          message = "You Passed";
+          break;
+        case "F":
+          message = "Better luck";
+          break;
+        default:
+          message = "No message";
+      }
+
+      console.log("Marks:", marks);
+      console.log("Grade:", grade);
+      console.log("Message:", message);
+    }
+  </script>
+</body>
+</html>
